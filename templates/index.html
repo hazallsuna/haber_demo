@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8"/>
+    <title>Hazal'dan Al Haberi</title>
+</head>
+<body>
+    <h1>Çekilen Haber Başlıkları</h1>
+    <ul>
+        {% for haber in haberler %}
+        <li>{{ haber }}</li>
+        {% endfor %}
+    </ul>
+    <hr/>
+    <h2>Magazin Haberi (Vertex AI)</h2>  
+    {% for paragraf in llm_output %}
+        <p>{{ paragraf|safe }}</p>
+    {% endfor %}
+</body>
+</html>
+
+
+
